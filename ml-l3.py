@@ -14,3 +14,13 @@ while True
 	time.sleep(1)
 	GPIO.output(LED_Pin, False)
 	time.sleep(1)
+
+# Pulses:
+# ON	2000 us
+# OFF	27830 us
+# ON	400 us
+# OFF	1580 us
+# ON	400 us
+# OFF	3580 us
+# ON	400 us
+# Repeats again after 63.2 ms
