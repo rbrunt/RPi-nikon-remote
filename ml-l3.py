@@ -13,8 +13,10 @@ GPIO.setup(11, GPIO.OUT)
 
 # Infinite Loop - for now we'll just blink the LED to make sure it's all working...
 while True :
+	print "Turning on"
 	GPIO.output(LED_Pin, True)
 	time.sleep(1)
+	print "Turning off"
 	GPIO.output(LED_Pin, False)
 	time.sleep(1)
 
