@@ -6,7 +6,7 @@ import time
 LED_Pin = 11
 
 # Setup output pin:
-GPIO.setup(11. GPIO.OUT)
+GPIO.setup(11, GPIO.OUT)
 
 # Infinite Loop - for now we'll just blink the LED to make sure it's all working...
 while True
