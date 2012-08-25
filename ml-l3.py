@@ -2,6 +2,9 @@ import RPi.GPIO as GPIO
 # Time is required for the blinking:
 import time
 
+# Set to board pin numbering scheme:
+GPIO.setmode(GPIO.BOARD)
+
 # Choose which pin the LED is controlled from:
 LED_Pin = 11
 
