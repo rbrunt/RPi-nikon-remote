@@ -39,7 +39,7 @@ def displayprogress(num) :
 			i += 1
 		# Now we turn on the LEDs that we want:
 		i = 0
-		while i < (num - 1) :
+		while i < (num) :
 			GPIO.output(PIN_LIST[i], True)
 			i += 1
 
@@ -62,8 +62,8 @@ GPIO.output(RED_1, True)
 time.sleep(0.5)
 GPIO.output(RED_2, True)
 time.sleep(0.5)
-
-
+print "Done!"
+input("press any key to coninue")
 
 print "turn on 1 LED"
 displayprogress(1)
@@ -91,5 +91,5 @@ while True :
 		displayprogress(number)
 		print ""
 	else :
-		print "you need to enter a number between 1 and 6!"
+		print "you need to enter a number between 0 and 6!"
 		print ""
