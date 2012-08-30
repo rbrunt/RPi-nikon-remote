@@ -51,17 +51,17 @@ setupoutputs(PIN_LIST)
 print ""
 print "tetsing LED's:"
 GPIO.output(GREEN_1, True)
-time.sleep(0.5s)
+time.sleep(0.5)
 GPIO.output(GREEN_2, True)
-time.sleep(0.5s)
+time.sleep(0.5)
 GPIO.output(YELLOW_1, True)
-time.sleep(0.5s)
+time.sleep(0.5)
 GPIO.output(YELLOW_2, True)
-time.sleep(0.5s)
+time.sleep(0.5)
 GPIO.output(RED_1, True)
-time.sleep(0.5s)
+time.sleep(0.5)
 GPIO.output(RED_2, True)
-time.sleep(0.5s)
+time.sleep(0.5)
 
 
 
