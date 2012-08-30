@@ -32,7 +32,7 @@ def setupoutputs(OUT_LIST) :
 def displayprogress(num) :
 	if num < 7 :
 		# Turn off any LEDs currently lit:
-		print "turning off LEDs:"
+		#print "turning off LEDs:"
 		i = 0
 		while i < len(PIN_LIST) :
 			GPIO.output(PIN_LIST[i], False)
@@ -49,47 +49,45 @@ def displayprogress(num) :
 
 setupoutputs(PIN_LIST)
 print ""
-print "tetsing LED's:"
-GPIO.output(GREEN_1, True)
-time.sleep(0.5)
-GPIO.output(GREEN_2, True)
-time.sleep(0.5)
-GPIO.output(YELLOW_1, True)
-time.sleep(0.5)
-GPIO.output(YELLOW_2, True)
-time.sleep(0.5)
-GPIO.output(RED_1, True)
-time.sleep(0.5)
-GPIO.output(RED_2, True)
-time.sleep(0.5)
-print "Done!"
-input("press any key to coninue")
-
 print "turn on 1 LED"
 displayprogress(1)
 time.sleep(1)
+displayprogress(0)
+time.sleep(0.5)
 print "turn on 2 LEDs"
 displayprogress(2)
 time.sleep(1)
+dislayprogress(0)
+time.sleep(0.5)
 print "turn on 3 LEDs"
 displayprogress(3)
 time.sleep(1)
+displayprogress(0)
+time.sleep(0.5)
 print "turn on 4 LEDs"
 displayprogress(4)
 time.sleep(1)
+displayprogress(0)
+time.sleep(0.5)
 print "turn on 5 LEDs"
 displayprogress(5)
 time.sleep(1)
+displayprogress(0)
+time.sleep(0.5)
 print "turn on 6 LEDs"
 displayprogress(6)
 time.sleep(1)
+displayprogress(0)
 
 while True :
-	number = int(input("Please enter the number of LED's to light:"))
-	if number < 7 :
-		print "Lighting " + str(number) + " LED's..."
-		displayprogress(number)
-		print ""
-	else :
-		print "you need to enter a number between 0 and 6!"
-		print ""
+	number = int(input("Please enter the number of LED's to light: "))
+	try :
+		if number < 7 :
+			print "Lighting " + str(number) + " LED's..."
+			displayprogress(number)
+			print ""
+		else :
+			print "you need to enter a number between 0 and 6!"
+			print ""
+	except TypeError:
+		print "Please enter a number!"
