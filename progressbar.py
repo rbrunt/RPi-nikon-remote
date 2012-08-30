@@ -49,6 +49,22 @@ def displayprogress(num) :
 
 setupoutputs(PIN_LIST)
 print ""
+print "tetsing LED's:"
+GPIO.output(GREEN_1, True)
+time.sleep(0.5s)
+GPIO.output(GREEN_2, True)
+time.sleep(0.5s)
+GPIO.output(YELLOW_1, True)
+time.sleep(0.5s)
+GPIO.output(YELLOW_2, True)
+time.sleep(0.5s)
+GPIO.output(RED_1, True)
+time.sleep(0.5s)
+GPIO.output(RED_2, True)
+time.sleep(0.5s)
+
+
+
 print "turn on 1 LED"
 displayprogress(1)
 time.sleep(1)
@@ -77,13 +93,3 @@ while True :
 	else :
 		print "you need to enter a number between 1 and 6!"
 		print ""
-
-
-# Infinite Loop - for now we'll just blink the LED to make sure it's all working...
-while True :
-	print "Turning on"
-	GPIO.output(LED_Pin, True)
-	time.sleep(1)
-	print "Turning off"
-	GPIO.output(LED_Pin, False)
-	time.sleep(1)
