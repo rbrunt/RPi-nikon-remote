@@ -44,7 +44,7 @@ def displayprogress(num) :
 			i += 1
 
 
-	else
+	else :
 		print "You need to pass a number between 1 and 6!"
 
 setupoutputs(PIN_LIST)
