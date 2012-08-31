@@ -81,7 +81,7 @@ displayprogress(0)
 
 while True :
 	number = int(input("Please enter the number of LED's to light: "))
-	try :
+	try:
 		if number < 7 :
 			print "Lighting " + str(number) + " LED's..."
 			displayprogress(number)
@@ -89,5 +89,5 @@ while True :
 		else :
 			print "you need to enter a number between 0 and 6!"
 			print ""
-	except TypeError:
+	except:
 		print "Please enter a number!"
